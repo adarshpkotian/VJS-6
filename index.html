@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>To Do</title>
+  </head>
+  <body class="body">
+    <div class="main-bg"></div>
+
+    <div class="container">
+      <div class="logo">
+        <h1>T O D O</h1>
+        <div class="logo-img"></div>
+      </div>
+
+      <div class="input-box">
+        <div class="checkbox-and-input">
+          <div class="round">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox"></label>
+          </div>
+          <input type="text" class="input-textbox" name="inputTextbox"/>
+        </div>
+      </div>
+
+      <div class="output-box">
+        <ul class="sortable-list"></ul>
+        <div class="last-row">
+          <div class="items-left">
+            <span class="items-left-number">0</span> item(s) left
+          </div>
+          <div class="filters">
+            <button id="filter-all">All</button>
+            <button id="filter-active">Active</button>
+            <button id="filter-completed">Completed</button>
+          </div>
+          <div class="clear">
+            <button id="clear-completed">Clear Completed</button>
+          </div>
+        </div>
+      </div>
+      <div class="dragging-info">Drag and Drop only on PC</div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 2.5rem;
+  color: black;
+}
+.body-dark {
+  background-color: #181824;
+}
+
+.main-bg {
+  position: absolute;
+  background-image: url(./images/bg-desktop-light.jpg);
+  height: 12.5rem;
+  width: 100%;
+  z-index: -10;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-bg-dark {
+  background-image: url(./images/bg-desktop-dark.jpg);
+
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+h1 {
+  color: white;
+}
+.logo-img {
+  background: url(./images/icon-moon.svg);
+  height: 1.25rem;
+  width: 1.25rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+/* checkbox styling */
+.round {
+  position: relative;
+  height: 28px;
+  width: 28px;
+}
+
+.round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 28px;
+  box-sizing: unset;
+  
+}
+.input-box {
+  width: 100%;
+}
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background: linear-gradient(162deg, rgba(115, 186, 233, 1) 0%, rgba(154, 133, 245, 1) 94%);
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
+    width: 30rem;
+}
+
+.checkbox-and-input {
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: white;
+    height: 3.5rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    gap: 1.25rem;
+    align-items: center;
+    padding-left: 13px;
+    border-radius: 5px;
+}
+
+.checkbox-and-input:hover {
+    transform: translateY(-1px);
+}
+
+input[type="text"] {
+  height: 100%;
+  width: 100%;
+  border: 0px;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+.output-box {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* sortable */
+.sortable-list {
+  width:100%;
+  
+}
+.logo-img-dark {
+  background: url(./images/icon-sun.svg);
+  height: 1.25rem;
+  width: 1.25rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.sortable-list .item {
+  list-style: none;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+  padding: 10px 13px;
+  height: 3.5rem;
+  
+}
+
+.sortable-list .item:hover {
+  transform: translateY(-1px);
+  cursor: pointer;
+}
+.item .details {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+
+.item.dragging {
+  opacity: 0.6;
+}
+.item.dragging :where(.details) {
+  opacity: 0;
+}
+
+/* filters row */
+.last-row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 2.5rem;
+  align-items: center;
+  padding: 10px 25px;
+  font-size: 12.5px;
+  color: #505166;
+
+}
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: #505166;
+
+}
+button:hover {
+  color: black;
+  transform: translateY(-1px);
+}
+.dragging-info {
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #505166;
+}
+
+.dragging-info-dark {
+  color: #505166;
+}
+.active {
+  color: #6c8fcb;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 2.5rem 1rem;
+  }
+  .main-bg {
+    background: url(./images/bg-mobile-light.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .main-bg-dark {
+    background: url(./images/bg-mobile-dark.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .last-row {
+    padding: 10px 12px;
+  
+  }
+}
